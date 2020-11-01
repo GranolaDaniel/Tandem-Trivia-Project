@@ -1,5 +1,0 @@
--- Make sure that only 10 questions are asked
--- Makes sure questions don't repeat
-
-
-++ Give users the ability to choose their theme at the beginning of the quiz
