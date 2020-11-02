@@ -37,14 +37,24 @@ Here's a quick look at at the files and directories you'll find in this project:
    ```shell
    $ git clone https://github.com/GranolaDaniel/Tandem-Trivia-Project.git
    ```
-1. Next, start up a virtual environment using venv and install the required dependencies
-   ```shell
-   $ cd Tandem Trivia Project
-   $ python -m venv env
-   $ source env/bin/activate
-   $ pip install --upgrade pip
-   $ pip install -r requirements.txt
-   ```
+1. Next, start up a virtual environment using venv.
+    1. For MacOS and Unix:
+        ```shell
+        $ cd Tandem Trivia Project
+        $ python -m venv env
+        $ source env/bin/activate
+        ```
+    1. For Windows:
+         ```shell
+        $ cd Tandem Trivia Project
+        $ python -m venv env
+        $ source env\\Scripts\\activate.bat
+        ```
+1. Then, upgrade pip and install the dependencies.
+    ```shell
+    $ pip install --upgrade pip
+    $ pip install -r requirements.txt
+    ```
 1. Lastly, start the game!
    ```shell
    $ cd triviagame
