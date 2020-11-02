@@ -1,7 +1,6 @@
-#Tandem project to take in trivia questions from a JSON file, and allow users to take the quiz via CLI
 from gamelogic import run_game
 
-#Variables
+#The JSON fiel to draw questions and answers from
 trivia_questions = './Apprentice_TandemFor400_Data.json'
 
 if __name__ == '__main__':

@@ -41,7 +41,7 @@ def format_question(question, index):
     #This filter takes the user's input and then compares that with the correct answer
     'filter': lambda answer: validate_answer(answer, question['correct'])
     }
-    #Adds each answer to the question
+    #Adds each answer to the question prompt
     for answer in answers_list:
         formatted_question['choices'].append(
             {

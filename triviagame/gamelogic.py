@@ -12,12 +12,13 @@ def run_game(game_questions, num_questions=10):
     preformatted_list = []
     formatted_list = []
 
-    while len(preformatted_list) != 10:
+    #Adds the question to a list so it can be formatted later
+    while len(preformatted_list) != num_questions:
         preformatted_list.append(game_questions.pop())
-
+    #Formats the questions for use with PyInquirer and uses the question's index to assign it a question number
     for idx in range(0, num_questions):
         formatted_list.append(format_question(preformatted_list[idx], idx+1))
-    
+    #Starts the game session, then displays the user's total score at the end
     answers = prompt(formatted_list)
     final_score = sum(answers.values())
     
