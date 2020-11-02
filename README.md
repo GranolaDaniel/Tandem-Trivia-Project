@@ -4,7 +4,7 @@ A CLI-based trivia game. Uses [PyInquirer](https://github.com/CITGuru/PyInquirer
 
 ### What's inside?
 
-Here's a quick look at at the files and directories you'll find in this project:
+Here's a quick look at the files and directories you'll find in this project:
 
 ```text
     .
@@ -24,7 +24,7 @@ Here's a quick look at at the files and directories you'll find in this project:
 
     1.  **`/gamelogic.py`**: Contains the function for actually running the game and displaying the score to the user at the end.
     1.  **`/helpers.py`**: Contains functions for parsing a JSON file containing the questions and answers for the game, and a function for formatting that parsed file for use with PyInquirer's prompt method.
-    1.  **`/triviagame.py`**: Specifies which JSON to use for questions and answers, and calls run_game to start the game.
+    1.  **`/triviagame.py`**: Specifies which JSON to use for questions and answers, and calls `gamelogic.run_game` to start the game.
     1.  **`/Apprentice_TandemFor400_Data.json`**: The JSON file containing questions and answers.
 1.  **`/tests`**: Contains the test file.
 
@@ -38,13 +38,13 @@ Here's a quick look at at the files and directories you'll find in this project:
    $ git clone https://github.com/GranolaDaniel/Tandem-Trivia-Project.git
    ```
 1. Next, start up a virtual environment using venv.
-    1. For MacOS and Unix:
+    - For macOS and Unix:
         ```shell
         $ cd Tandem Trivia Project
         $ python -m venv env
         $ source env/bin/activate
         ```
-    1. For Windows:
+    - For Windows:
          ```shell
         $ cd Tandem Trivia Project
         $ python -m venv env
@@ -63,7 +63,7 @@ Here's a quick look at at the files and directories you'll find in this project:
 
 ### Running the test
 
-1. From the tests directory, run:
+1. From the **`/tests`** directory, run:
 
 ```shell
    $ python -m unittest helpers_test.py
