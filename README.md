@@ -41,13 +41,13 @@ Here's a quick look at the files and directories you'll find in this project:
     - For macOS and Unix:
         ```shell
         $ cd Tandem Trivia Project
-        $ python -m venv env
+        $ python3 -m venv env
         $ source env/bin/activate
         ```
     - For Windows:
          ```shell
         $ cd Tandem Trivia Project
-        $ python -m venv env
+        $ python3 -m venv env
         $ source env\Scripts\activate.bat
         ```
 1. Then, upgrade pip and install the dependencies.
@@ -58,7 +58,7 @@ Here's a quick look at the files and directories you'll find in this project:
 1. Lastly, start the game!
    ```shell
    $ cd triviagame
-   $ python triviagame.py
+   $ python3 triviagame.py
    ```
 
 ### Running the test
@@ -66,7 +66,7 @@ Here's a quick look at the files and directories you'll find in this project:
 1. From the **`/tests`** directory, run:
 
 ```shell
-   $ python -m unittest helpers_test.py
+   $ python3 -m unittest helpers_test.py
    ```
 
 ### Things to add in the future
