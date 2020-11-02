@@ -20,15 +20,15 @@ Here's a quick look at at the files and directories you'll find in this project:
     ├── README.md
     └── requirements.txt
 ```
-1.  **`/triviagame`**: Contains all of the main game files.
+1.  **`/triviagame`**: Contains all of the files that are used to run the game.
 
-    1.  **`/gamelogic.py`**: 
-    1.  **`/helpers.py`**: This has the navigation links for your pages.
-    1.  **`/triviagame.py`**: This component is used in all of your pages to make sure they all use the same navigation. This is also where you will implement your skip link.
-    1.  **`/Apprentice_TandemFor400_Data.json`**: The list of questions and answers that users are prompted with when playing the game.
-1.  **`/tests`**: Contains the test files.
+    1.  **`/gamelogic.py`**: Contains the function for actually running the game and displaying the score to the user at the end.
+    1.  **`/helpers.py`**: Contains functions for parsing a JSON file containing the questions and answers for the game, and a function for formatting that parsed file for use with PyInquirer's prompt method.
+    1.  **`/triviagame.py`**: Specifies which JSON to use for questions and answers, and calls run_game to start the game.
+    1.  **`/Apprentice_TandemFor400_Data.json`**: The JSON file containing questions and answers.
+1.  **`/tests`**: Contains the test file.
 
-    1.  **`/helpers_test.py`**: This ensures that our navigation links have focus rings, which are important visual cues when navigating by keyboard.
+    1.  **`/helpers_test.py`**: Tests `helpers.test_validate` to ensure that it correctly compares a user's answer with the correct answer.
 
 ### Playing the game
 
@@ -48,7 +48,7 @@ Here's a quick look at at the files and directories you'll find in this project:
          ```shell
         $ cd Tandem Trivia Project
         $ python -m venv env
-        $ source env\\Scripts\\activate.bat
+        $ source env\Scripts\activate.bat
         ```
 1. Then, upgrade pip and install the dependencies.
     ```shell
@@ -71,6 +71,8 @@ Here's a quick look at at the files and directories you'll find in this project:
 
 ### Things to add in the future
 
-1. Themes!
-1. More tests
-1. Replay the game with new, unique questions
+1. Themes! PyInquirer enables you to cheange the color of the prompts, so I'd like to implement different themes that a user can choose before starting the quiz. This might inclide dark mode vs. light mode, and some more accessible color options.
+1. Add in more unit tests. Specifically for `gamelogic.rungame`.
+1. Enable users to start a new game automatically, and give them new, unique answers.
+1. Add in more question sets, and allow the user to select which one they'd like to try.
+1. Adjust `gamelogic.run_game` so that you can't set num_questions to more than 10.

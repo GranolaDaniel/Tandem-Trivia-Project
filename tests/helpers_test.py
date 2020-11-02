@@ -15,9 +15,9 @@ def get_random_string(length):
     return result_str
 
 class TestValidateAnswer(unittest.TestCase):
-    def test_validate(self):
+    def test_validate_correct(self):
         """
-        Ensure that validate_answer() returns 1 if the answer matches the correct answer, else return 0
+        Ensure that validate_answer() returns 1 if the answer matches the correct answer
         """
         answer1 = get_random_string(10)
         correct_answer = answer1
@@ -25,6 +25,16 @@ class TestValidateAnswer(unittest.TestCase):
         test_answer = validate_answer(answer1, correct_answer)
 
         self.assertEqual(test_answer, 1)
+    def test_validate_incorrect(self):
+        """
+        Ensure that validate_answer() returns 0 if the answer doesn't match the correct answer
+        """
+        answer1 = get_random_string(10)
+        correct_answer = get_random_string(9)
+
+        test_answer = validate_answer(answer1, correct_answer)
+
+        self.assertEqual(test_answer, 0)
 
 
 if __name__ == '__main__':
